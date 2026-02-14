@@ -176,12 +176,19 @@ h2{
   margin-top: 14px;
 }
 .project{ overflow: hidden; }
-.project-img{
-  height: 150px;
-  background:
-    linear-gradient(135deg, rgba(110,231,255,0.22), rgba(37,99,235,0.22));
+.project-img {
+  height: 180px;
+  overflow: hidden;
   border-bottom: 1px solid var(--border);
 }
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .project-body{ padding: 16px; }
 
 /* Buttons */
