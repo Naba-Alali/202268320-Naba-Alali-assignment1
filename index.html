@@ -34,6 +34,7 @@
           <a class="btn outline" href="#contact">Contact Me</a>
         </div>
       </div>
+    </div>
 
 
 <!-- Profile Information Card: Displays personal and professional details -->
@@ -46,11 +47,11 @@
     <li><strong>💻 Languages:</strong> HTML • CSS • JS</li>
     <li>
       <strong>🔗 GitHub Account:</strong> 
-      <a href="#" class="profile-link">github.com/Naba-Alali</a>
+      <a href="https://github.com/Naba-Alali" class="profile-link" target="_blank" rel="noopener">github.com/Naba-Alali</a>
     </li>
     <li>
       <strong>🔗 LinkedIn Profile:</strong> 
-      <a href="#" class="profile-link">linkedin.com/in/naba-alali</a>
+      <a href="https://linkedin.com/in/naba-alali" class="profile-link" target="_blank" rel="noopener">linkedin.com/in/naba-alali</a>
     </li>
   </ul>
 </div>
@@ -114,9 +115,9 @@
     </div>
   </section>
   <!-- Modal Window: Opens when clicking "Details" button -->
-  <div id="projectModal" class="modal" onclick="closeModal(event)">
+  <div id="projectModal" class="modal" onclick="if(event.target.id==='projectModal') closeModal()">
   <div class="modal-content">
-    <button class="close-btn" type="button" onclick="closeModal(event)">×</button>
+    <button class="close-btn" type="button" onclick="closeModal()">×</button>
     <h2 id="modalTitle"></h2>
     <p id="modalDescription"></p>
   </div>

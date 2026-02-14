@@ -2,7 +2,7 @@
 /* Default theme = dark */
 :root{
   --bg: #1c1625;              /* deep dark purple-gray */
-  --card: #594875;            /* soft dark lavender */
+  --card:  #433a52;            /* soft dark lavender */
   --text: #f4f1fa;            /* very light text */
   --muted:  #e6e0f5;           /* soft muted purple */
   --border: #3a2f4d;          /* subtle border */
@@ -222,12 +222,12 @@ h2{
 }
 
 .btn:hover{
-  background: #655187;
+  background: #5a467a;
   transform: translateY(-2px);
 }
 .btn.outline{
   background: transparent;
-  border-color: var(--border);
+  border-color: 1px solid var(--border);
   color: var(--text);
 }
 .btn.small{ padding: 8px 10px; border-radius: 12px; font-size: 14px; }

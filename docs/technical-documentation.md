@@ -36,30 +36,30 @@ The website includes three main sections: an introduction (About Me), a Projects
 ## Layout and Responsive Design
 The layout was implemented using modern CSS techniques.
 
-.Grid Layout
-    -CSS Grid is used for structuring the hero section.
-    -CSS Grid is also used for displaying project cards in two columns on larger screens.
+### Grid Layout
+    - CSS Grid is used for structuring the hero section.
+    - CSS Grid is also used for displaying project cards in two columns on larger screens.
 
-.Flexbox Layout
-    -Navigation bar alignment
-    -Button grouping
-    -Contact form layout
-    -Footer alignment
+### Flexbox Layout
+    - Navigation bar alignment
+    - Button grouping
+    - Contact form layout
+    - Footer alignment
 
-.Responsive Behavior
+### Responsive Behavior
 Media queries were implemented to ensure the layout adapts to smaller screens.
 Example behavior:
-    -On screens below 900px, the hero section switches to a single-column layout.
-    -Project cards stack vertically on smaller devices.
+    - On screens below 900px, the hero section switches to a single-column layout.
+    - Project cards stack vertically on smaller devices.
 
 The website was tested by resizing the browser window and using Chrome DevTools mobile simulation. No layout breaking or horizontal scrolling occurs on smaller screens.
 
 ## Theme System (Light and Dark Mode)
 The project supports both light and dark themes.
-    -Dark theme variables are defined inside the :root selector.
-    -Light theme overrides are defined using [data-theme="light"].
-    -JavaScript dynamically switches themes by modifying the data-theme attribute.
-    -The selected theme is saved using localStorage to preserve user preference.
+    - Dark theme variables are defined inside the :root selector.
+    - Light theme overrides are defined using [data-theme="light"].
+    - JavaScript dynamically switches themes by modifying the data-theme attribute.
+    - The selected theme is saved using localStorage to preserve user preference.
 
 This approach improves user experience and demonstrates understanding of dynamic styling.
 
@@ -67,25 +67,25 @@ This approach improves user experience and demonstrates understanding of dynamic
 
 
 ## Key Features
-.Responsive Layout
-    -Fully responsive across desktop, tablet, and mobile devices.
-    -No layout breaking on smaller screens.
-    -Clean content stacking on mobile.
+### Responsive Layout
+    - Fully responsive across desktop, tablet, and mobile devices.
+    - No layout breaking on smaller screens.
+    - Clean content stacking on mobile.
 
-.Project Modal
-    -Clicking “Details” opens a modal window.
-    -Modal content updates dynamically depending on the selected project.
-    -Modal can be closed using a button or by clicking outside.
+### Project Modal
+    - Clicking “Details” opens a modal window.
+    - Modal content updates dynamically depending on the selected project.
+    - Modal can be closed using a button or by clicking outside.
 
-.Time-Based Greeting
-    -Displays “Good morning,” “Good afternoon,” or “Good evening” based on system time.
+### Time-Based Greeting
+    - Displays “Good morning,” “Good afternoon,” or “Good evening” based on system time.
 
-.Contact Form Validation
-    -Name must contain at least 2 characters.
-    -Email must match a valid pattern using regular expressions.
-    -Message must contain at least 5 characters.
-    -Displays error messages under invalid inputs.
-    -Displays success message upon valid submission.
+### Contact Form Validation
+    - Name must contain at least 2 characters.
+    - Email must match a valid pattern using regular expressions.
+    - Message must contain at least 5 characters.
+    - Displays error messages under invalid inputs.
+    - Displays success message upon valid submission.
 
 
 ## Accessibility Considerations

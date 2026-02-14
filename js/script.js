@@ -64,14 +64,10 @@ function showProject(projectName) {
   modal.style.display = "flex";
 }
 
-function closeModal(event) {
+function closeModal() {
   // close when clicking outside the modal-content OR on close button
   const modal = document.getElementById("projectModal");
-  if (!modal) return;
-
-  if (!event || event.target === modal || event.currentTarget === modal) {
-    modal.style.display = "none";
-  }
+  if (modal) modal.style.display = "none";
 }
 
 // IMPORTANT: expose functions for inline onclick=""
