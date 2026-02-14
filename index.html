@@ -1,14 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Top Nav -->
+  <nav class="nav">
+    <a class="brand" href="#top">My Portfolio</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="themeBtn" class="btn small" type="button" aria-label="Toggle theme">
+        🌙 Theme
+      </button>
+    </div>
+  </nav>
 
-  <h1>My Portfolio</h1>
-  <p>Welcome to my personal website.</p>
+  <!-- Hero -->
+  <header id="top" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p id="greeting" class="pill">Hello!</p>
+        <h1>Hi, I'm <span class="accent">YOUR NAME</span></h1>
+        <p class="subtitle">
+          Web development student building clean, responsive websites with HTML, CSS, and JavaScript.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn outline" href="#contact">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="card profile">
+        <div class="avatar" aria-hidden="true">YN</div>
+        <div>
+          <h2 class="profile-title">Quick Info</h2>
+          <ul class="list">
+            <li><strong>Location:</strong> Your City</li>
+            <li><strong>Focus:</strong> Front-end basics</li>
+            <li><strong>Tools:</strong> VS Code, GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am a student interested in building modern web pages. I enjoy learning by making small projects,
+        improving layouts, and adding simple interactions with JavaScript.
+      </p>
+      <div class="chips">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Responsive Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h2>Projects</h2>
+      <p class="muted">Two sample projects (you can rename them later).</p>
+
+      <div class="grid">
+        <article class="card project">
+          <div class="project-img" role="img" aria-label="Project image placeholder"></div>
+          <div class="project-body">
+            <h3>Project One</h3>
+            <p>A simple responsive landing page using HTML and CSS (Flexbox/Grid).</p>
+            <button class="btn small" type="button" onclick="showProject('Project One')">Details</button>
+          </div>
+        </article>
+
+        <article class="card project">
+          <div class="project-img" role="img" aria-label="Project image placeholder"></div>
+          <div class="project-body">
+            <h3>Project Two</h3>
+            <p>A JavaScript mini app with a theme toggle and user-friendly UI.</p>
+            <button class="btn small" type="button" onclick="showProject('Project Two')">Details</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="muted">No backend required. This form just validates and shows a message.</p>
+
+      <form id="contactForm" class="card form" novalidate>
+        <div class="two">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            <small class="error" id="nameErr"></small>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <small class="error" id="emailErr"></small>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+          <small class="error" id="msgErr"></small>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Send</button>
+          <button class="btn outline" type="reset">Clear</button>
+          <span id="formStatus" class="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> YOUR NAME</p>
+      <a class="top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
