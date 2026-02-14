@@ -1,11 +1,12 @@
 
 
-// ===== Helpers =====
+// Sets the website theme (light or dark) and stores preference in localStorage
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
 }
 
+// Returns greeting message based on current time
 function getGreeting() {
   const hour = new Date().getHours();
   if (hour < 12) return "Good morning 👋";
@@ -20,13 +21,13 @@ if (savedTheme) setTheme(savedTheme);
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("greeting").textContent = getGreeting();
 
-// Theme toggle button
+// Toggle theme when user clicks theme button
 document.getElementById("themeBtn").addEventListener("click", () => {
   const current = document.documentElement.getAttribute("data-theme");
   setTheme(current === "light" ? "dark" : "light");
 });
 
-// Project details demo
+// Opens modal and dynamically updates content based on selected project
 function showProject(projectName) {
   const modal = document.getElementById("projectModal");
   const title = document.getElementById("modalTitle");
@@ -94,6 +95,7 @@ function clearErrors() {
   showError("msgErr", "");
 }
 
+// Contact form validation (client-side only, no backend)
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   clearErrors();

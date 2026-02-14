@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Top Nav -->
+  <!-- Navigation bar with anchor links and theme toggle button -->
   <nav class="nav">
     <a class="brand" href="#top">My Portfolio</a>
     <div class="nav-links">
@@ -20,7 +20,7 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section: Introduction and quick profile summary -->
   <header id="top" class="hero">
     <div class="container hero-grid">
       <div>
@@ -36,7 +36,7 @@
       </div>
 
 
-
+<!-- Profile Information Card: Displays personal and professional details -->
 <div class="card profile">
   <h2 class="profile-title">Profile Info</h2>
 
@@ -76,7 +76,7 @@
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section: Displays academic projects with modal details -->
   <section id="projects" class="section alt">
     <div class="container">
       <h2>Projects</h2>
@@ -91,7 +91,7 @@
           </div>
 
           <div class="project-body">
-            <h3>Hourse App</h3>
+            <h3>Horse App</h3>
             <p>A Horse Racing Database System designed to manage and organize racing information. It allows administrators to add, update, and manage races, trainers, and stables, while guests can view race results and explore statistics through an interactive interface.</p>
             <button class="btn small" type="button" onclick="showProject('Horse App')">Details</button>
           </div>
@@ -113,6 +113,7 @@
       </div>
     </div>
   </section>
+  <!-- Modal Window: Opens when clicking "Details" button -->
   <div id="projectModal" class="modal" onclick="closeModal(event)">
   <div class="modal-content">
     <button class="close-btn" type="button" onclick="closeModal(event)">×</button>
@@ -122,7 +123,7 @@
 </div>
 
 
-  <!-- Contact -->
+  <!-- Contact Form Section: Includes client-side validation (no backend) -->
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>

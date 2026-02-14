@@ -11,7 +11,7 @@
 }
 
 
-/* Light theme = BABY PURPLE pastel */
+/* Light theme  */
 [data-theme="light"]{
   --bg: #ffffff;              /* clean white background */
   --card: #f6f2fb;            /* very soft lavender */
@@ -48,6 +48,8 @@ body{
   border-bottom: 1px solid var(--border);
   background: rgba(5,10,20,0.75);
   backdrop-filter: blur(10px);
+   padding: 12px 0;
+
 }
 [data-theme="light"] .nav{
   background: rgba(255,255,255,0.75);
@@ -64,11 +66,9 @@ body{
   color: var(--text);
   opacity: 0.9;
 }
-.nav-links a:hover{ opacity: 1; }
 
-.nav .container, .nav{
-  padding: 12px 0;
-}
+
+
 .nav{
   display: flex;
   justify-content: center;
@@ -126,9 +126,7 @@ h1{
   border-bottom: 1px solid var(--border);
   background: rgba(255,255,255,0.03);
 }
-[data-theme="light"] .section.alt{
-  background: rgba(37,99,235,0.03);
-}
+
 
 h2{
   margin: 0 0 10px;
@@ -136,7 +134,7 @@ h2{
 }
 .muted{ color: var(--muted); margin-top: 0; }
 
-/* ====== Cards / UI ====== */
+/* Reusable card style for profile, projects, and forms */
 .card{
   background: var(--card);
   border: 1px solid var(--border);
@@ -321,7 +319,7 @@ input:focus, textarea:focus{
 }
 
 
-/* ====== Responsive ====== */
+/* Responsive adjustments for tablet and mobile screens */
 @media (max-width: 900px){
   .hero-grid{ grid-template-columns: 1fr; }
   .grid{ grid-template-columns: 1fr; }
