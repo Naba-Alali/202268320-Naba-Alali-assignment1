@@ -195,9 +195,10 @@ h2{
 }
 .project{ overflow: hidden; }
 .project-img {
-  height: 180px;
+  
   overflow: hidden;
   border-bottom: 1px solid var(--border);
+  
 }
 
 .project-image {
