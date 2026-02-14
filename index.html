@@ -35,23 +35,28 @@
         </div>
       </div>
 
-      <div class="card profile">
-        <div class="avatar" aria-hidden="true">YN</div>
-        <div>
-          <h2 class="profile-title">Profile Info</h2>
-          <ul class="list">
-            <li><strong>📍Location:</strong> Dhahran</li>
-            <li><strong>🎨 Focus:</strong> Front-end basics</li>
-            <li><strong>💻 Languages:</strong> HTML • CSS • JS</li>
-          </ul>
-          <h2 class="profile-title">profile-social</h2>
-          <ul class="list">
-            <li><a href="https://github.com/Naba-Alali">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/naba-alali">LinkedIn</a></li>
-          </ul>   
-        </div>
-      </div>
-    </div>
+
+
+<div class="card profile">
+  <h2 class="profile-title">Profile Info</h2>
+
+  <ul class="profile-list">
+    <li><strong>📍 Location:</strong> Dhahran</li>
+    <li><strong>🎨 Focus:</strong> Front-end basics</li>
+    <li><strong>💻 Languages:</strong> HTML • CSS • JS</li>
+    <li>
+      <strong>🔗 GitHub Account:</strong> 
+      <a href="#" class="profile-link">github.com/Naba-Alali</a>
+    </li>
+    <li>
+      <strong>🔗 LinkedIn Profile:</strong> 
+      <a href="#" class="profile-link">linkedin.com/in/naba-alali</a>
+    </li>
+  </ul>
+</div>
+
+
+
   </header>
 
   <!-- About -->
@@ -88,7 +93,7 @@
           <div class="project-body">
             <h3>Hourse App</h3>
             <p>A Horse Racing Database System designed to manage and organize racing information. It allows administrators to add, update, and manage races, trainers, and stables, while guests can view race results and explore statistics through an interactive interface.</p>
-            <button class="btn small" type="button" onclick="showProject('Project One')">Details</button>
+            <button class="btn small" type="button" onclick="showProject('Horse App')">Details</button>
           </div>
         </article>
 
@@ -102,12 +107,20 @@
           <div class="project-body">
             <h3>Club Zone</h3>
             <p>A club zone platform that connects students, clubs, and events in one place. It allows students to join clubs and register for events, while administrators and club leaders manage members, venues, and activities.</p>
-            <button class="btn small" type="button" onclick="showProject('Project Two')">Details</button>
+            <button class="btn small" type="button" onclick="showProject('Club Zone')">Details</button>
           </div>
         </article>
       </div>
     </div>
   </section>
+  <div id="projectModal" class="modal" onclick="closeModal(event)">
+  <div class="modal-content">
+    <button class="close-btn" type="button" onclick="closeModal(event)">×</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
 
   <!-- Contact -->
   <section id="contact" class="section">

@@ -1,31 +1,36 @@
 /* ====== Base ====== */
+/* Default theme = dark */
 :root{
-  --bg: #f6f0ff;              /* soft pastel background */
-  --card: #ffffff;            /* clean white cards */
-  --text: #3d2c5e;            /* deep soft purple text */
-  --muted: #7e6aa8;           /* lighter purple text */
-  --border: #e5d9ff;          /* pastel border */
-  --accent: #c8a2ff;          /* baby purple accent */
-  --shadow: 0 8px 20px rgba(180,150,255,0.2);
+  --bg: #1c1625;              /* deep dark purple-gray */
+  --card: #594875;            /* soft dark lavender */
+  --text: #f4f1fa;            /* very light text */
+  --muted:  #e6e0f5;           /* soft muted purple */
+  --border: #3a2f4d;          /* subtle border */
+  --accent: #655187;          /* YOUR purple */
+  --shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 
+/* Light theme = BABY PURPLE pastel */
 [data-theme="light"]{
-  --bg: #f6f7fb;
-  --card: #ffffff;
-  --text: #121826;
-  --muted: rgba(18,24,38,0.75);
-  --border: rgba(18,24,38,0.12);
-  --accent: #2563eb;
-  --shadow: 0 12px 30px rgba(16,24,40,0.12);
+  --bg: #ffffff;              /* clean white background */
+  --card: #f6f2fb;            /* very soft lavender */
+  --text: #3f2b5b;            /* deep muted purple */
+  --muted: #6e5a8d;           /* softer purple */
+  --border: #e6def5;          /* light lavender border */
+  --accent: #655187;          /* dusty lavender (like your screenshot) */
+  --shadow: 0 6px 18px rgba(101, 81, 135, 0.15);
 }
+
+
+
 
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 body{
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: linear-gradient(135deg, #f6f0ff, #efe6ff);
+  background: var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
@@ -138,27 +143,41 @@ h2{
   border-radius: 18px;
   box-shadow: var(--shadow);
 }
-.profile{
-  padding: 18px;
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 14px;
-  align-items: center;
+.profile {
+  padding: 20px;
+  
 }
-.avatar{
-  width: 80px;
-  height: 80px;
-  border-radius: 18px;
-  border: 1px solid var(--border);
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  font-size: 22px;
+
+.profile-title {
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.profile-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-list li {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.profile-link {
   color: var(--text);
-  background: rgba(110,231,255,0.12);
+  text-decoration: none;
+  font-weight: 500;
 }
-.profile-title{ margin: 0 0 6px; font-size: 18px; }
-.list{ margin: 0; padding-left: 18px; color: var(--muted); }
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+
 
 .chips{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .chip{
@@ -205,10 +224,9 @@ h2{
 }
 
 .btn:hover{
-  background: #b88cff;
+  background: #655187;
   transform: translateY(-2px);
 }
-
 .btn.outline{
   background: transparent;
   border-color: var(--border);
@@ -273,6 +291,35 @@ input:focus, textarea:focus{
   opacity: 0.9;
 }
 .top:hover{ opacity: 1; }
+
+.modal{
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content{
+  width: min(520px, 92%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 18px 22px;
+  box-shadow: var(--shadow);
+}
+
+.close-btn{
+  float: right;
+  font-size: 22px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
 
 /* ====== Responsive ====== */
 @media (max-width: 900px){

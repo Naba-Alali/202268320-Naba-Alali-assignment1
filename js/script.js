@@ -1,3 +1,5 @@
+
+
 // ===== Helpers =====
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
@@ -25,10 +27,58 @@ document.getElementById("themeBtn").addEventListener("click", () => {
 });
 
 // Project details demo
-function showProject(name) {
-  alert(`${name}: You can replace this with real project details later.`);
+function showProject(projectName) {
+  const modal = document.getElementById("projectModal");
+  const title = document.getElementById("modalTitle");
+  const desc = document.getElementById("modalDescription");
+
+  if (!modal || !title || !desc) {
+    console.error("Modal elements not found. Check IDs in index.html");
+    return;
+  }
+
+  if (projectName === "Horse App") {
+    title.textContent = "Horse Racing Database System";
+    desc.innerHTML = `
+      <strong>Type:</strong> University Course Project<br><br>
+      <strong>Technologies:</strong> Python, SQL, Database Design<br><br>
+      <strong>Description:</strong> A system designed to manage horse races, trainers, and stables.
+      Includes administrative controls and guest viewing features.<br><br>
+      <strong>What I Learned:</strong> Database structure design and UI layout planning.
+    `;
+  } else if (projectName === "Club Zone") {
+    title.textContent = "Club Zone";
+    desc.innerHTML = `
+      <strong>Type:</strong> University Course Project<br><br>
+      <strong>Technologies:</strong> Java, Figma<br><br>
+      <strong>Description:</strong> A student club management platform allowing users to join clubs,
+      explore events, and manage activities.<br><br>
+      <strong>What I Learned:</strong> Front-end structuring and responsive design.
+    `;
+  } else {
+    title.textContent = projectName;
+    desc.textContent = "Details coming soon.";
+  }
+
+  modal.style.display = "flex";
 }
+
+function closeModal(event) {
+  // close when clicking outside the modal-content OR on close button
+  const modal = document.getElementById("projectModal");
+  if (!modal) return;
+
+  if (!event || event.target === modal || event.currentTarget === modal) {
+    modal.style.display = "none";
+  }
+}
+
+// IMPORTANT: expose functions for inline onclick=""
 window.showProject = showProject;
+window.closeModal = closeModal;
+
+
+
 
 // ===== Contact form validation (no backend) =====
 const form = document.getElementById("contactForm");
